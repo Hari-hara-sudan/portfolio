@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { motion } from 'framer-motion';
 import { ExternalLink } from 'lucide-react';
@@ -17,34 +16,24 @@ const CodingProfilesSection = () => {
       url: '#'
     },
     {
-      platform: 'Codeforces',
-      username: 'your-username',
-      stats: {
-        rating: '1650',
-        rank: 'Specialist'
-      },
-      color: 'from-blue-500 to-cyan-500',
-      url: '#'
-    },
-    {
       platform: 'CodeChef',
-      username: 'your-username',
+      username: 'kl_9922008154',
       stats: {
         rating: '1800',
         stars: '4 Star'
       },
       color: 'from-purple-500 to-pink-500',
-      url: '#'
+      url: 'https://www.codechef.com/users/kl_9922008154'
     },
     {
       platform: 'HackerRank',
-      username: 'your-username',
+      username: 'h9922008154',
       stats: {
         badges: '25+',
         level: 'Gold'
       },
       color: 'from-green-500 to-teal-500',
-      url: '#'
+      url: 'https://www.hackerrank.com/profile/h9922008154'
     }
   ];
 
@@ -68,7 +57,7 @@ const CodingProfilesSection = () => {
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mx-auto">
           {profiles.map((profile, index) => (
             <motion.div
               key={profile.platform}

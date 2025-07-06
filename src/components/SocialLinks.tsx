@@ -1,26 +1,26 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Github, Linkedin, Twitter } from 'lucide-react';
+import { Github, Linkedin, Twitter, Instagram } from 'lucide-react';
 
 const SocialLinks = () => {
   const socialLinks = [
     {
       name: 'GitHub',
       icon: Github,
-      url: 'https://github.com/yourusername',
+      url: 'https://github.com/rifamr/',
       color: 'hover:text-gray-300'
     },
     {
       name: 'LinkedIn',
       icon: Linkedin,
-      url: 'https://linkedin.com/in/yourusername',
+      url: 'https://www.linkedin.com/in/rifamr0106/',
       color: 'hover:text-blue-400'
     },
     {
-      name: 'Twitter',
-      icon: Twitter,
-      url: 'https://twitter.com/yourusername',
+      name: 'Instagram',
+      icon: Instagram,
+      url: 'https://www.instagram.com/riha.an5682/',
       color: 'hover:text-blue-400'
     }
   ];

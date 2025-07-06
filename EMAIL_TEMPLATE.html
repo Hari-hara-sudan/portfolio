@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Contact Form Message</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f8f9fa;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #ffffff;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .header {
+            background: linear-gradient(135deg, #8b5cf6 0%, #ec4899 100%);
+            color: white;
+            padding: 30px 40px;
+            text-align: center;
+        }
+        .header h1 {
+            margin: 0;
+            font-size: 28px;
+            font-weight: 700;
+        }
+        .header p {
+            margin: 10px 0 0 0;
+            opacity: 0.9;
+            font-size: 16px;
+        }
+        .content {
+            padding: 40px;
+        }
+        .message-card {
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            border: 1px solid #e9ecef;
+            border-radius: 12px;
+            padding: 25px;
+            margin: 20px 0;
+        }
+        .sender-info {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+            padding-bottom: 15px;
+            border-bottom: 2px solid #e9ecef;
+        }
+        .avatar {
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, #8b5cf6 0%, #ec4899 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 20px;
+            font-weight: bold;
+            margin-right: 15px;
+        }
+        .sender-details h3 {
+            margin: 0 0 5px 0;
+            color: #2d3748;
+            font-size: 18px;
+        }
+        .sender-details p {
+            margin: 0;
+            color: #718096;
+            font-size: 14px;
+        }
+        .message-content {
+            background-color: white;
+            border-radius: 8px;
+            padding: 20px;
+            border-left: 4px solid #8b5cf6;
+        }
+        .message-content h4 {
+            margin: 0 0 15px 0;
+            color: #2d3748;
+            font-size: 16px;
+        }
+        .message-text {
+            color: #4a5568;
+            line-height: 1.6;
+            margin: 0;
+        }
+        .contact-details {
+            background-color: #f7fafc;
+            border-radius: 8px;
+            padding: 20px;
+            margin-top: 20px;
+        }
+        .contact-details h4 {
+            margin: 0 0 15px 0;
+            color: #2d3748;
+            font-size: 16px;
+        }
+        .contact-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+            font-size: 14px;
+        }
+        .contact-item strong {
+            color: #2d3748;
+            min-width: 80px;
+            display: inline-block;
+        }
+        .contact-item span {
+            color: #4a5568;
+        }
+        .footer {
+            background-color: #2d3748;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            font-size: 14px;
+        }
+        .footer a {
+            color: #8b5cf6;
+            text-decoration: none;
+        }
+        @media only screen and (max-width: 600px) {
+            .container {
+                margin: 10px;
+                border-radius: 8px;
+            }
+            .header, .content {
+                padding: 20px;
+            }
+            .sender-info {
+                flex-direction: column;
+                text-align: center;
+            }
+            .avatar {
+                margin: 0 0 15px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>📧 New Contact Message</h1>
+            <p>You've received a new message from your portfolio website</p>
+        </div>
+        
+        <div class="content">
+            <div class="message-card">
+                <div class="sender-info">
+                    <div class="avatar">
+                        {{name[0]}}
+                    </div>
+                    <div class="sender-details">
+                        <h3>{{name}}</h3>
+                        <p>{{time}}</p>
+                    </div>
+                </div>
+                
+                <div class="message-content">
+                    <h4>📝 Message:</h4>
+                    <p class="message-text">{{message}}</p>
+                </div>
+            </div>
+            
+            <div class="contact-details">
+                <h4>📋 Contact Information:</h4>
+                <div class="contact-item">
+                    <strong>Name:</strong>
+                    <span>{{name}}</span>
+                </div>
+                <div class="contact-item">
+                    <strong>Email:</strong>
+                    <span>{{from_email}}</span>
+                </div>
+                <div class="contact-item">
+                    <strong>Subject:</strong>
+                    <span>{{subject}}</span>
+                </div>
+                <div class="contact-item">
+                    <strong>Time:</strong>
+                    <span>{{time}}</span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer">
+            <p>This message was sent from your portfolio contact form</p>
+            <p>© 2024 Rifa Portfolio. All rights reserved.</p>
+        </div>
+    </div>
+</body>
+</html> 

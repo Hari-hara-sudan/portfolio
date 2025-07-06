@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { motion } from 'framer-motion';
 import { ExternalLink, Github } from 'lucide-react';
@@ -8,28 +7,19 @@ const ProjectsSection = () => {
   const projects = [
     {
       id: 1,
-      title: 'E-Commerce Platform',
-      description: 'A full-stack e-commerce solution with React, Node.js, and MongoDB',
+      title: 'Hospitalize',
+      description: 'Built a multi-page hospital website with sections for departments, doctors, contact, and appointment booking. Used Flexbox for responsive layout and CSS animations to enhance user interaction and visual appeal.',
       image: '/placeholder.svg',
-      tags: ['React', 'Node.js', 'MongoDB', 'Stripe'],
+      tags: ['HTML', 'CSS', 'Flexbox', 'CSS Animations'],
       demoUrl: '#',
       githubUrl: '#'
     },
     {
       id: 2,
-      title: 'AI Dashboard',
-      description: 'Analytics dashboard with AI-powered insights and real-time data',
+      title: 'LuxeStore',
+      description: 'Designed and developed LuxeStore, a front-end e-commerce website showcasing premium product listings with a clean, modern interface. Implemented Flexbox for responsive layouts, and applied CSS animations to enhance visual interactivity and user engagement.',
       image: '/placeholder.svg',
-      tags: ['Next.js', 'Python', 'TensorFlow', 'D3.js'],
-      demoUrl: '#',
-      githubUrl: '#'
-    },
-    {
-      id: 3,
-      title: 'Mobile App',
-      description: 'Cross-platform mobile application with React Native',
-      image: '/placeholder.svg',
-      tags: ['React Native', 'Firebase', 'Redux', 'TypeScript'],
+      tags: ['HTML', 'CSS', 'Flexbox', 'CSS Animations'],
       demoUrl: '#',
       githubUrl: '#'
     }
@@ -64,7 +54,7 @@ const ProjectsSection = () => {
               transition={{ duration: 0.6, delay: index * 0.2 }}
               viewport={{ once: true }}
               whileHover={{ y: -10 }}
-              className="group bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm border border-gray-700/50 rounded-2xl overflow-hidden hover:border-purple-500/50 transition-all duration-300"
+              className="bg-gray-800/60 border border-gray-700/50 rounded-2xl p-6 hover:border-purple-500/50 transition-all duration-300"
             >
               <div className="relative overflow-hidden">
                 <img

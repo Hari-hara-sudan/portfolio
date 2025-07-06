@@ -17,17 +17,13 @@ const SkillsSection = () => {
       title: 'Backend',
       skills: [
         { name: 'Node.js', level: 85 },
-        { name: 'Python', level: 80 },
-        { name: 'PostgreSQL', level: 75 },
-        { name: 'MongoDB', level: 70 }
+        { name: 'Python', level: 80 }
       ]
     },
     {
       title: 'Tools & Others',
       skills: [
         { name: 'Git', level: 90 },
-        { name: 'Docker', level: 75 },
-        { name: 'AWS', level: 70 },
         { name: 'Figma', level: 85 }
       ]
     }
