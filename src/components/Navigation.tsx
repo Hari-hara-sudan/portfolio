@@ -31,9 +31,9 @@ const Navigation = () => {
         <div className="flex justify-between items-center py-4">
           <motion.div
             whileHover={{ scale: 1.05 }}
-            className="text-2xl font-bold bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent"
+            className="text-xl font-bold bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent"
           >
-            Portfolio
+            RIFA M R
           </motion.div>
 
           {/* Desktop Navigation */}
