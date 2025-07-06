@@ -2,7 +2,7 @@
 import React, { Suspense } from 'react';
 import { motion } from 'framer-motion';
 import Particles from 'react-particles';
-import { loadSlim } from 'tsparticles';
+import { loadSlim } from 'tsparticles-slim';
 import { Canvas } from '@react-three/fiber';
 import { OrbitControls, Text3D, Float } from '@react-three/drei';
 import HeroSection from '../components/HeroSection';
@@ -15,7 +15,7 @@ import CodingProfilesSection from '../components/CodingProfilesSection';
 import SocialLinks from '../components/SocialLinks';
 import Navigation from '../components/Navigation';
 import { particlesConfig } from '../config/particlesConfig';
-import { Engine } from 'tsparticles';
+import type { Engine } from 'tsparticles-engine';
 
 const Index = () => {
   const particlesInit = async (main: Engine) => {
