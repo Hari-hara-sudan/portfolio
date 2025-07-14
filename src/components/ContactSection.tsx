@@ -38,12 +38,12 @@ const ContactSection = () => {
           minute: '2-digit',
           timeZoneName: 'short'
         }),
-        to_email: 'rifa162005@gmail.com'
+        to_email: 'hariharasudhan2212@gmail.com'
       };
 
       await emailjs.send(
-        'service_u2xism2', // Updated with your EmailJS service ID
-        'template_4laqvbo', // Updated with your EmailJS template ID
+        'service_0var6md', // Updated with your EmailJS service ID
+        'template_fd2h5pf', // Updated with your EmailJS template ID
         templateParams
       );
 
@@ -75,19 +75,19 @@ const ContactSection = () => {
     {
       icon: Mail,
       label: 'Email',
-      value: 'rifa162005@gmail.com',
-      href: 'mailto:rifa162005@gmail.com'
+      value: 'hariharasudhan2212@gmail.com',
+      href: 'mailto:hariharasudhan2212@gmail.com'
     },
     {
       icon: Phone,
       label: 'Phone',
-      value: '+91 93424 76529',
-      href: 'tel: 93424 76529'
+      value: '+91 87547 06366',
+      href: 'tel:+918754706366'
     },
     {
       icon: MapPin,
       label: 'Location',
-      value: 'Kadayanallur , Tamil Nadu',
+      value: 'Kumbakonam, Tamil Nadu',
       href: '#'
     }
   ];

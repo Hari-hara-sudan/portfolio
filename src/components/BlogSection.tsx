@@ -1,10 +1,9 @@
-
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Calendar, ArrowRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
-const BlogSection = () => {
+const BlogSection = React.memo(() => {
   const articles = [
     {
       id: 1,
@@ -36,19 +35,19 @@ const BlogSection = () => {
     <section id="blog" className="py-24 px-4">
       <div className="max-w-7xl mx-auto">
         <motion.div
-          initial={{ opacity: 0, y: 50 }}
+          initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true, margin: "-100px" }}
           className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
             <span className="bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent">
-              Featured Articles
+              Latest Articles
             </span>
           </h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Insights and thoughts on web development, technology, and design
+            Insights and thoughts on web development, design, and technology
           </p>
         </motion.div>
 
@@ -56,11 +55,11 @@ const BlogSection = () => {
           {articles.map((article, index) => (
             <motion.article
               key={article.id}
-              initial={{ opacity: 0, y: 50 }}
+              initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: index * 0.2 }}
-              viewport={{ once: true }}
-              whileHover={{ y: -10 }}
+              transition={{ duration: 0.5, delay: index * 0.1 }}
+              viewport={{ once: true, margin: "-50px" }}
+              whileHover={{ y: -5 }}
               className="group bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm border border-gray-700/50 rounded-2xl overflow-hidden hover:border-purple-500/50 transition-all duration-300 cursor-pointer"
             >
               <div className="relative overflow-hidden">
@@ -73,10 +72,10 @@ const BlogSection = () => {
               </div>
               
               <div className="p-6">
-                <div className="flex items-center gap-4 text-sm text-gray-400 mb-3">
-                  <div className="flex items-center gap-1">
+                <div className="flex items-center gap-4 text-sm text-gray-400 mb-4">
+                  <div className="flex items-center gap-2">
                     <Calendar size={16} />
-                    <span>{new Date(article.date).toLocaleDateString()}</span>
+                    <span>{article.date}</span>
                   </div>
                   <span>{article.readTime}</span>
                 </div>
@@ -84,14 +83,13 @@ const BlogSection = () => {
                 <h3 className="text-xl font-bold mb-3 text-white group-hover:text-purple-400 transition-colors">
                   {article.title}
                 </h3>
-                
-                <p className="text-gray-300 mb-4 line-clamp-3">
+                <p className="text-gray-300 mb-6 leading-relaxed">
                   {article.excerpt}
                 </p>
                 
                 <Button
-                  variant="ghost"
-                  className="text-purple-400 hover:text-purple-300 p-0 h-auto font-medium group-hover:translate-x-2 transition-transform duration-300"
+                  size="sm"
+                  className="bg-gradient-to-r from-purple-500 to-pink-500 hover:opacity-90 text-white group-hover:scale-105 transition-transform"
                 >
                   Read More
                   <ArrowRight size={16} className="ml-2" />
@@ -103,6 +101,8 @@ const BlogSection = () => {
       </div>
     </section>
   );
-};
+});
+
+BlogSection.displayName = 'BlogSection';
 
 export default BlogSection;

@@ -1,19 +1,18 @@
-
 export const particlesConfig = {
   background: {
     color: {
       value: "transparent",
     },
   },
-  fpsLimit: 60,
+  fpsLimit: 30,
   interactivity: {
     events: {
       onClick: {
-        enable: true,
+        enable: false,
         mode: "push",
       },
       onHover: {
-        enable: true,
+        enable: false,
         mode: "grab",
       },
       resize: true,
@@ -32,18 +31,18 @@ export const particlesConfig = {
   },
   particles: {
     color: {
-      value: ["#8b5cf6", "#06b6d4", "#f59e0b", "#ef4444", "#10b981", "#f97316", "#ec4899"],
+      value: ["#8b5cf6", "#06b6d4", "#f59e0b"],
     },
     links: {
       color: {
-        value: ["#8b5cf6", "#06b6d4", "#f59e0b"],
+        value: ["#8b5cf6", "#06b6d4"],
       },
-      distance: 200,
+      distance: 150,
       enable: true,
-      opacity: 0.4,
-      width: 1.5,
+      opacity: 0.3,
+      width: 1,
       triangles: {
-        enable: true,
+        enable: false,
         opacity: 0.1,
       },
     },
@@ -53,14 +52,14 @@ export const particlesConfig = {
       outModes: {
         default: "out" as const,
       },
-      random: true,
+      random: false,
       speed: {
-        min: 0.5,
-        max: 2,
+        min: 0.3,
+        max: 1,
       },
       straight: false,
       attract: {
-        enable: true,
+        enable: false,
         rotateX: 600,
         rotateY: 600,
       },
@@ -68,48 +67,43 @@ export const particlesConfig = {
     number: {
       density: {
         enable: true,
-        area: 1000,
+        area: 800,
       },
-      value: 120,
+      value: 60,
     },
     opacity: {
       value: {
-        min: 0.1,
-        max: 0.8,
+        min: 0.2,
+        max: 0.6,
       },
       animation: {
-        enable: true,
+        enable: false,
         speed: 1,
         minimumValue: 0.1,
       },
     },
     shape: {
-      type: ["circle", "triangle", "polygon"],
-      options: {
-        polygon: {
-          sides: 6,
-        },
-      },
+      type: ["circle"],
     },
     size: {
       value: {
         min: 1,
-        max: 4,
+        max: 3,
       },
       animation: {
-        enable: true,
+        enable: false,
         speed: 2,
         minimumValue: 0.5,
       },
     },
     twinkle: {
       particles: {
-        enable: true,
+        enable: false,
         frequency: 0.05,
         opacity: 1,
       },
     },
   },
-  detectRetina: true,
+  detectRetina: false,
   smooth: true,
 };

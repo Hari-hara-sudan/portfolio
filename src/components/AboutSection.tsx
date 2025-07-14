@@ -2,22 +2,22 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Code, Palette, Zap } from 'lucide-react';
 
-const AboutSection = () => {
+const AboutSection = React.memo(() => {
   const features = [
     {
       icon: Code,
-      title: 'Clean Code',
-      description: 'Writing maintainable and scalable code with best practices'
+      title: 'Web Development',
+      description: 'Building scalable, responsive, and creative web applications using modern technologies.'
     },
     {
       icon: Palette,
-      title: 'Creative Design',
-      description: 'Blending creativity with functionality for stunning results'
+      title: 'AI & Data Analysis',
+      description: 'Applying AI and data analysis to solve real-world problems and deliver insights.'
     },
     {
       icon: Zap,
-      title: 'Performance',
-      description: 'Optimized solutions that deliver exceptional user experiences'
+      title: 'Open Source',
+      description: 'Contributing to and maintaining open source projects for the community.'
     }
   ];
 
@@ -25,10 +25,10 @@ const AboutSection = () => {
     <section id="about" className="py-24 px-4">
       <div className="max-w-7xl mx-auto">
         <motion.div
-          initial={{ opacity: 0, y: 50 }}
+          initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true, margin: "-100px" }}
           className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
@@ -37,8 +37,7 @@ const AboutSection = () => {
             </span>
           </h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
-            I'm a passionate full-stack developer with expertise in modern web technologies. 
-            I love creating innovative solutions that combine beautiful design with powerful functionality.
+            Certified web development intern with hands-on experience in React, JavaScript, and modern web technologies. Passionate about building scalable, creative solutions and contributing to open source. Always eager to learn and take on new challenges.
           </p>
         </motion.div>
 
@@ -46,16 +45,16 @@ const AboutSection = () => {
           {features.map((feature, index) => (
             <motion.div
               key={feature.title}
-              initial={{ opacity: 0, y: 50 }}
+              initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: index * 0.2 }}
-              viewport={{ once: true }}
-              whileHover={{ scale: 1.05, y: -10 }}
+              transition={{ duration: 0.5, delay: index * 0.1 }}
+              viewport={{ once: true, margin: "-50px" }}
+              whileHover={{ scale: 1.02, y: -5 }}
               className="bg-gray-800/60 border border-gray-700/50 rounded-2xl p-8 hover:border-purple-500/50 transition-all duration-300"
             >
               <motion.div
                 whileHover={{ rotate: 360 }}
-                transition={{ duration: 0.6 }}
+                transition={{ duration: 0.5 }}
                 className="w-16 h-16 mx-auto mb-6 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center"
               >
                 <feature.icon className="text-white" size={32} />
@@ -68,6 +67,8 @@ const AboutSection = () => {
       </div>
     </section>
   );
-};
+});
+
+AboutSection.displayName = 'AboutSection';
 
 export default AboutSection;

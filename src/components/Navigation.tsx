@@ -1,9 +1,8 @@
-
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Menu, X } from 'lucide-react';
 
-const Navigation = () => {
+const Navigation = React.memo(() => {
   const [isOpen, setIsOpen] = useState(false);
 
   const navItems = [
@@ -23,17 +22,19 @@ const Navigation = () => {
 
   return (
     <motion.nav
-      initial={{ y: -100 }}
+      initial={{ y: -50 }}
       animate={{ y: 0 }}
+      transition={{ duration: 0.5 }}
       className="fixed top-0 left-0 right-0 z-50 bg-black/20 backdrop-blur-lg border-b border-white/10"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center py-4">
           <motion.div
-            whileHover={{ scale: 1.05 }}
+            whileHover={{ scale: 1.02 }}
+            transition={{ duration: 0.2 }}
             className="text-xl font-bold bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent"
           >
-            RIFA M R
+            HARRY
           </motion.div>
 
           {/* Desktop Navigation */}
@@ -42,7 +43,8 @@ const Navigation = () => {
               <motion.button
                 key={item.name}
                 onClick={() => scrollToSection(item.href)}
-                whileHover={{ scale: 1.1, color: '#a855f7' }}
+                whileHover={{ scale: 1.05, color: '#a855f7' }}
+                transition={{ duration: 0.2 }}
                 className="text-gray-300 hover:text-purple-400 transition-colors"
               >
                 {item.name}
@@ -54,6 +56,7 @@ const Navigation = () => {
           <div className="md:hidden">
             <motion.button
               whileTap={{ scale: 0.95 }}
+              transition={{ duration: 0.1 }}
               onClick={() => setIsOpen(!isOpen)}
               className="text-white"
             >
@@ -68,13 +71,15 @@ const Navigation = () => {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
+            transition={{ duration: 0.3 }}
             className="md:hidden py-4 border-t border-white/10"
           >
             {navItems.map((item) => (
               <motion.button
                 key={item.name}
                 onClick={() => scrollToSection(item.href)}
-                whileHover={{ x: 10 }}
+                whileHover={{ x: 5 }}
+                transition={{ duration: 0.2 }}
                 className="block w-full text-left py-2 text-gray-300 hover:text-purple-400 transition-colors"
               >
                 {item.name}
@@ -85,6 +90,8 @@ const Navigation = () => {
       </div>
     </motion.nav>
   );
-};
+});
+
+Navigation.displayName = 'Navigation';
 
 export default Navigation;
