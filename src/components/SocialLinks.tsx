@@ -8,19 +8,19 @@ const SocialLinks = () => {
     {
       name: 'GitHub',
       icon: Github,
-      url: 'https://github.com/hariharasudhan',
+      url: 'https://github.com/Hari-hara-sudan/',
       color: 'hover:text-gray-300',
     },
     {
       name: 'LinkedIn',
       icon: Linkedin,
-      url: 'https://www.linkedin.com/in/hariharasudhan/',
+      url: 'https://www.linkedin.com/in/harihara-sudan-kmu',
       color: 'hover:text-blue-400',
     },
     {
       name: 'Instagram',
       icon: Instagram,
-      url: 'https://www.instagram.com/hariharasudhan/',
+      url: 'https://www.instagram.com/harihara__sudhan/',
       color: 'hover:text-pink-400',
     },
     // Uncomment if you want phone or email
