@@ -69,7 +69,7 @@ const HeroSection = React.memo(() => {
             className="flex flex-col sm:flex-row gap-6 justify-center items-center"
           >
             <a
-              href="/Resume.pdf"
+              href="/Hari_Resume.pdf"
               download
               className="bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white px-10 py-4 rounded-full text-lg font-semibold transition-all transform hover:scale-105 shadow-lg shadow-purple-500/25 flex items-center justify-center"
             >
